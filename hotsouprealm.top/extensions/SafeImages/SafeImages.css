@@ -1,0 +1,41 @@
+/* Add your custom CSS styles for the safe images toggle switch here */
+/* Custom CSS for the safe images toggle switch */
+
+/* Hide the default checkbox input */
+input[type="checkbox"]#safeImagesToggle {
+  display: none;
+}
+
+/* Create the custom toggle switch appearance */
+label[for="safeImagesToggle"] {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+}
+
+/* Style the toggle switch thumb */
+label[for="safeImagesToggle"]::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Move the thumb to the right when the switch is checked (on) */
+input[type="checkbox"]#safeImagesToggle:checked + label[for="safeImagesToggle"]::after {
+  transform: translateX(30px);
+}
+
+/* Style the switch background when the switch is checked (on) */
+input[type="checkbox"]#safeImagesToggle:checked + label[for="safeImagesToggle"] {
+  background-color: #66bb6a;
+}
